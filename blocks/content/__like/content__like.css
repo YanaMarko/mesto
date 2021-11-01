@@ -1,8 +1,18 @@
 .content__like {
-
+  margin: 30px 20px 30px 5px;
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/icon-disabled.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 762px) {
-  .content__like {
-  }
+.content__like:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.content__like:active {
+  background-image: url(../../../images/icon-active.jpg);
 }
