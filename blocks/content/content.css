@@ -1,5 +1,5 @@
 .content {
-  margin: 51px 0 0;
+  margin: 51px auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(282px, 1fr));
   grid-template-rows: repeat(2, minmax(360px, 362px));
@@ -8,9 +8,20 @@
   max-width: 880px;
 }
 
+@media (min-width: 763px) and (max-width: 1274px) {
+  .content {
+    grid-template-columns: repeat(2, minmax(282px, 1fr));
+    grid-template-rows: repeat(3, minmax(360px, 362px));
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 750px;
+    column-gap: 185px; 
+  }
+}
+
 @media screen and (max-width: 762px) {
   .content {
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     max-width: 320px;
