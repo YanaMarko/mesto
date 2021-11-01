@@ -1,0 +1,9 @@
+.header__place {
+  margin: 0;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 762px) {
+  .header__place {
+  }
+}

@@ -1,0 +1,8 @@
+.content__img {
+
+}
+
+@media screen and (max-width: 762px) {
+  .content__img {
+  }
+}

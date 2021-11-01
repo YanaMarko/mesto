@@ -1,0 +1,8 @@
+.content__like {
+
+}
+
+@media screen and (max-width: 762px) {
+  .content__like {
+  }
+}

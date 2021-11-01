@@ -1,0 +1,19 @@
+.profile__add-photo-btn {
+  margin: auto 0 auto auto;
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  font-size: 53px;
+}
+
+.profile__add-photo-btn:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 762px) {
+  .profile__add-photo-btn {
+  }
+}
