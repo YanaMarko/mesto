@@ -16,3 +16,7 @@
 .content__like:active {
   background-image: url(../../../images/icon-active.jpg);
 }
+
+.content__like:visited {
+  background-image: url(../../../images/icon-active.jpg);
+}
