@@ -1,4 +1,4 @@
-.pop-up-form__save {
+.pop-up__save {
   min-width: 358px;
   min-height: 50px;
   text-align: center;
@@ -12,13 +12,13 @@
   margin: 41px auto 37px;
 }
 
-.pop-up-form__save:hover {
+.pop-up__save:hover {
   cursor: pointer;
   opacity: 0.8;
 }
 
 @media screen and (max-width: 762px) {
-  .pop-up-form__save {
+  .pop-up__save {
     min-width: 238px;
     min-height: 46px;
     margin: 25px auto 33px;
