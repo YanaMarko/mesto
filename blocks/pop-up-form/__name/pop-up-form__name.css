@@ -5,21 +5,10 @@
   border-bottom: .1px solid rgb(0, 0, 0, .2);
 }
 
-@media (min-width: 1019px) and (max-width: 1274px) {
-  .pop-up-form__name {
-   
-  }
-}
-
-@media (min-width: 763px) and (max-width: 1018px) {
-  .pop-up-form__name {
-    
-  }
-}
-
 @media screen and (max-width: 762px) {
   .pop-up-form__name {
     min-width: 238px;
     height: 54px;
+    
   }
 }

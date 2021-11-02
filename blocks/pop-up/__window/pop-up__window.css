@@ -10,18 +10,6 @@
   justify-content: space-between;    
 }
 
-@media (min-width: 1019px) and (max-width: 1274px) {
-  .pop-up__window {
-   
-  }
-}
-
-@media (min-width: 763px) and (max-width: 1018px) {
-  .pop-up__window {
-    
-  }
-}
-
 @media screen and (max-width: 762px) {
   .pop-up__window {
     min-width: 282px;

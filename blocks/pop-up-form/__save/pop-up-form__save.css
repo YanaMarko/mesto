@@ -17,23 +17,11 @@
   opacity: 0.8;
 }
 
-@media (min-width: 1019px) and (max-width: 1274px) {
-  .pop-up-form__save {
-   
-  }
-}
-
-@media (min-width: 763px) and (max-width: 1018px) {
-  .pop-up-form__save {
-    
-  }
-}
-
 @media screen and (max-width: 762px) {
   .pop-up-form__save {
     min-width: 238px;
     min-height: 46px;
-    margin: 45px auto 25px;
+    margin: 25px auto 33px;
     font-size: 14px;
     line-height: 17px;   
   }

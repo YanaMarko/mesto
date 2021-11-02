@@ -5,22 +5,10 @@
   line-height: 29px;
 }
 
-@media (min-width: 1019px) and (max-width: 1274px) {
-  .pop-up__title {
-   
-  }
-}
-
-@media (min-width: 763px) and (max-width: 1018px) {
-  .pop-up__title {
-    
-  }
-}
-
 @media screen and (max-width: 762px) {
-  .pop-up__title {
-  margin: 25px auto 0;
-  font-size: 18px;
-  line-height: 22px;
+   .pop-up__title {
+    margin: 25px 24px 0;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
