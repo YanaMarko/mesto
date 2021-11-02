@@ -1,0 +1,69 @@
+.pop-up__close-btn {
+  position: absolute; 
+  right: -30px;
+  top: -40px; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  height: 32px;
+  width: 32px;
+}
+
+.pop-up__close-btn::before  {
+  position: absolute;
+  content: '';
+  height: 32px;
+  border: 2px solid white;
+  background-color: white;
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.pop-up__close-btn::after {
+  position: absolute;
+  content: '';
+  height: 32px;
+  border: 2px solid white;
+  background-color: white;
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+
+@media (min-width: 1019px) and (max-width: 1274px) {
+  .name {
+   
+  }
+}
+
+@media (min-width: 763px) and (max-width: 1018px) {
+  .name {
+    
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .pop-up__close-btn { 
+    right: -3px;
+    top: -37px; 
+  }
+  .pop-up__close-btn::before  {
+    position: absolute;
+    content: '';
+    height: 20px;
+    border: 1px solid white;
+    background-color: white;
+    top: 0;
+    transform: rotate(45deg);
+  }
+  
+  .pop-up__close-btn::after {
+    position: absolute;
+    content: '';
+    height: 20px;
+    border: 1px solid white;
+    background-color: white;
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
