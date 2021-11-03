@@ -24,17 +24,22 @@ const formName = document.querySelector('.pop-up-form__name');
 const formDescription = document.querySelector('.pop-up-form__description');
 const saveButton = document.querySelector('.pop-up__save');
 
-function changeName() {
-    const newName = formName.value;
-    userName.textContent = newName;
-}
-saveButton.addEventListener('click', changeName);
+function formSubmitHandler(evt) {
+    evt.preventDefault();
 
-function changeDescription() {
-    const newDescription = formDescription.value;
-    userDescription.textContent = newDescription;
+    function changeName() {
+        const newName = formName.value;
+        userName.textContent = newName;
+    }
+    saveButton.addEventListener('click', changeName);
+
+    function changeDescription() {
+        const newDescription = formDescription.value;
+        userDescription.textContent = newDescription;
+    }
+    saveButton.addEventListener('click', changeDescription);
 }
-saveButton.addEventListener('click', changeDescription);
+formElement.addEventListener('submit', formSubmitHandler);
 
 // ЛАЙКИ
 
