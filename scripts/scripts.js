@@ -18,26 +18,15 @@ function closePopup() {
 // ФОРМА
 
 const formElement = document.querySelector('.pop-up-form');
-const userName = document.querySelector('.profile__title');
-const userDescription = document.querySelector('.profile__subtitle');
-const formName = document.querySelector('.pop-up-form__name');
-const formDescription = document.querySelector('.pop-up-form__description');
-const saveButton = document.querySelector('.pop-up__save');
 
 function formSubmitHandler(evt) {
     evt.preventDefault();
+    const formName = document.querySelector('.pop-up-form__name').value;
+    const formDescription = document.querySelector('.pop-up-form__description').value;
 
-    function changeName() {
-        const newName = formName.value;
-        userName.textContent = newName;
-    }
-    saveButton.addEventListener('click', changeName);
-
-    function changeDescription() {
-        const newDescription = formDescription.value;
-        userDescription.textContent = newDescription;
-    }
-    saveButton.addEventListener('click', changeDescription);
+    document.querySelector('.profile__title').textContent = formName;
+    document.querySelector('.profile__subtitle').textContent = formDescription;
+    closePopup();
 }
 formElement.addEventListener('submit', formSubmitHandler);
 
