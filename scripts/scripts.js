@@ -36,3 +36,21 @@ function iLike() {
 function iDontLike() {
     like.classList.remove('content__like_visited');
 }
+
+// // обратимся к блоку 
+// const formElement = document.querySelector('.pop-up-form');
+// // обратимся к имени пользователя
+// const userName = userName.getAttribute('value');
+// // обратимся к описанию профиля
+// const userdescription = userdescription.getAttribute('value');
+// // изменение имени пользователя в профиле
+
+// // измение описания профиля
+
+
+// // сохраним изменения
+
+
+
+// // onchange = "onchangeName()"
+// // onchange = "onchangeDescription()"
