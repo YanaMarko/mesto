@@ -13,7 +13,6 @@
 .profile__add-photo-btn:hover {
   cursor: pointer;
   opacity: 0.5;
-  
 }
 
 @media screen and (max-width: 762px) {
