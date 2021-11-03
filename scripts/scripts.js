@@ -51,3 +51,5 @@ function iLike() {
 function iDontLike() {
     like.classList.remove('content__like_visited');
 }
+
+
