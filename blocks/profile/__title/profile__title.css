@@ -5,6 +5,12 @@
   line-height: 48px;
 }
 
+@media (min-width: 763px) and (max-width: 1018px) {
+  .profile__title {
+    font-size: 32px;
+  }
+}
+
 @media screen and (max-width: 762px) {
   .profile__title {
     margin: 26px auto 0;

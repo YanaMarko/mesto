@@ -11,7 +11,8 @@
 
 @media (min-width: 763px) and (max-width: 1018px) {
   .profile {
-    max-width: 750px;
+    max-width: 600px;
+    margin: 40px auto 0;
   }
 }
 

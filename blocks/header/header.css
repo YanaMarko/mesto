@@ -7,15 +7,9 @@
   max-width: 880px;
 }
 
-@media (min-width: 1019px) and (max-width: 1274px) {
-  .header {
-    max-width: 995px;
-  }
-}
-
 @media (min-width: 763px) and (max-width: 1018px) {
   .header {
-    max-width: 750px;
+    max-width: 600px;
   }
 }
 
