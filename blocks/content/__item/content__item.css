@@ -4,12 +4,12 @@
 
 @media screen and (max-width: 762px) {
   .content__item {
-    margin: 19px auto 0;
+    margin: 20px auto 0;
   }
 }
 
 @media screen and (max-width: 762px) {
   .content__item:first-of-type {
-    margin: 35px auto 0;
+    margin: 36px auto 0;
   }
 }
