@@ -4,15 +4,16 @@
   height: 50px;
   background-color: black;
   border: 2px solid white;
-  background-image: url(../../../images/plus-icon.jpg);
-  background-size: 26px;
+  border-radius: 2px;
+  background-image: url(../../../images/icon-plus.jpg);
+  background-size: 22px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .profile__add-photo-btn:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 762px) {

@@ -1,4 +1,4 @@
-.pop-up-form__description {
+.popup-form__description {
   min-width: 358px;
   min-height: 46px;
   border: none;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 762px) {
-  .pop-up-form__description {
+  .popup-form__description {
     min-width: 238px;
     min-height: 57px;
   }

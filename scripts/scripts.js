@@ -1,49 +1,30 @@
-// ПОП-АП
-
-const popupElement = document.querySelector('.pop-up');
+const popupElement = document.querySelector('.popup');
 const editButtonElement = document.querySelector('.profile__edit-btn');
-const closeButtonElement = document.querySelector('.pop-up__close-btn');
+const closeButtonElement = document.querySelector('.popup__close-btn');
+const formElement = document.querySelector('.popup-form');
+
+
+// ПОП-АП
 
 editButtonElement.addEventListener('click', openPopup);
 closeButtonElement.addEventListener('click', closePopup);
 
 function openPopup() {
-    popupElement.classList.remove('pop-up_opened');
+    popupElement.classList.remove('popup_opened');
 }
 
 function closePopup() {
-    popupElement.classList.add('pop-up_opened');
+    popupElement.classList.add('popup_opened');
 }
 
 // ФОРМА
 
-const formElement = document.querySelector('.pop-up-form');
-
 function formSubmitHandler(evt) {
     evt.preventDefault();
-    const formName = document.querySelector('.pop-up-form__name').value;
-    const formDescription = document.querySelector('.pop-up-form__description').value;
-
+    const formName = document.querySelector('.popup-form__name').value;
+    const formDescription = document.querySelector('.popup-form__description').value;
     document.querySelector('.profile__title').textContent = formName;
     document.querySelector('.profile__subtitle').textContent = formDescription;
     closePopup();
 }
 formElement.addEventListener('submit', formSubmitHandler);
-
-// ЛАЙКИ
-
-const like = document.querySelector('.content__like');
-const activeLike = document.querySelector('.content__like_visited');
-
-like.addEventListener('click', iLike);
-activeLike.addEventListener('click', iDontLike);
-
-function iLike() {
-    like.classList.add('content__like_visited');
-}
-
-function iDontLike() {
-    like.classList.remove('content__like_visited');
-}
-
-

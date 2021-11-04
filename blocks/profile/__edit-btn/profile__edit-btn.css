@@ -3,14 +3,14 @@
   height: 24px;
   width: 24px;
   border: 1px solid white;
-  background-image: url(../../../images/icon.jpg);
+  background-image: url(../../../images/icon-pen.jpg);
   background-size: cover;
   color: white;
 }
 
 .profile__edit-btn:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
 }
   
 @media screen and (max-width: 762px) {

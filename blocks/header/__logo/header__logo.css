@@ -1,8 +1,9 @@
 .header__logo {
-  font-weight: 200;
-  margin: 0;
-  font-size: 34px;
-  letter-spacing: 1px;
+  margin: 0 0 0 1px;
+  background-image: url(../../../images/icon-logo.jpg);
+  background-size: cover;
+  height: 33px;
+  width: 142px;
 }
 
 @media screen and (max-width: 762px) {
