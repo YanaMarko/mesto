@@ -13,7 +13,6 @@
     grid-template-columns: repeat(2, minmax(282px, 1fr));
     grid-template-rows: repeat(3, minmax(360px, 362px));
     max-width: 750px;
-    column-gap: 185px; 
   }
 }
 
