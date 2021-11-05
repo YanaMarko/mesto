@@ -12,19 +12,14 @@
   .content {
     grid-template-columns: repeat(2, minmax(282px, 1fr));
     grid-template-rows: repeat(3, minmax(360px, 362px));
-    max-width: 600px;
-  }
-}
-
-@media screen and (max-width: 1274px) {
-  .content {
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 580px;
   }
 }
 
 @media screen and (max-width: 762px) {
   .content {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     max-width: 320px;
     gap: 0;

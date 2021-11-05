@@ -9,11 +9,11 @@
   width: 32px;
 }
 
-.popup__close-btn:hover{
+.popup__close-btn:hover {
   opacity: 0.6;
 }
 
-.popup__close-btn::before  {
+.popup__close-btn::before {
   position: absolute;
   content: '';
   height: 32px;
@@ -38,7 +38,8 @@
     right: -3px;
     top: -37px; 
   }
-  .popup__close-btn::before  {
+  
+  .popup__close-btn::before {
     position: absolute;
     content: '';
     height: 20px;

@@ -1,4 +1,4 @@
-.popup-form__name {
+.popup-form__user_name {
   min-width: 358px;
   min-height: 44px;
   border: none;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 762px) {
-  .popup-form__name {
+  .popup-form__user_name {
     min-width: 238px;
     height: 54px;
   }

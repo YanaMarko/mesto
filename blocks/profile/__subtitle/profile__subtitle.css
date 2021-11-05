@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 763px) and (max-width: 1018px) {
+@media (min-width: 763px) and (max-width: 1274px) {
   .profile__title {
     font-size: 15px;
   }

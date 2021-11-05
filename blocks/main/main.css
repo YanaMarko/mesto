@@ -1,16 +1,16 @@
-.page {
+.main {
   max-width: 880px;
   margin: 0 auto;
 }
 
 @media (min-width: 763px) and (max-width: 1274px) {
-  .page {
+  .main {
     max-width: 750px;
   }
 }
 
 @media screen and (max-width: 762px) {
-  .page {
+  .main {
     max-width: 320px;
   }
 }

@@ -13,56 +13,58 @@
     <header class="header">
         <div class="header__logo"></div>
     </header>
-    <main class="page">
-        <div class="profile">
+    <main class="main">
+        <section class="profile">
             <img class="profile__avatar" src="./images/Jack-Yves-Cousto.jpg" alt="Жак-Ив Кусто">
-            <section class="profile__info">
-                <p class="profile__title">Жак-Ив Кусто</p>
-                <p class="profile__subtitle">Исследователь океана</p>
-            </section>
-            <button class="profile__edit-btn" type="button"></button>
+            <div class="profile__text">
+                <div class="profile__info">
+                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <p class="profile__subtitle">Исследователь океана</p>
+                </div>
+                <button class="profile__edit-btn" type="button"></button>
+            </div>
             <button class="profile__add-photo-btn" type="button"></button>
-        </div>
+        </section>
         <section class="content">
             <article class="content__item">
                 <img class="content__img" src="./images/dombay.jpg" alt="Домбай">
                 <div class="content__info">
-                    <p class="content__title">Домбай</p>
+                    <h2 class="content__title">Домбай</h2>
                     <button class="content__like" type="button"></button>
                 </div>
             </article>
             <article class="content__item">
                 <img class="content__img" src="./images/elbrus.jpg" alt="Эльбрус">
                 <div class="content__info">
-                    <p class="content__title">Гора Эльбрус</p>
+                    <h2 class="content__title">Гора Эльбрус</h2>
                     <button class="content__like" type="button"></button>
                 </div>
             </article>
             <article class="content__item">
                 <img class="content__img" src="./images/karachaevsk.jpg" alt="Карачаевск">
                 <div class="content__info">
-                    <p class="content__title">Карачаевск</p>
+                    <h2 class="content__title">Карачаевск</h2>
                     <button class="content__like" type="button"></button>
                 </div>
             </article>
             <article class="content__item">
                 <img class="content__img" src="./images/komi-republic.jpg" alt="Республика Коми">
                 <div class="content__info">
-                    <p class="content__title">Республика Коми</p>
+                    <h2 class="content__title">Республика Коми</h2>
                     <button class="content__like button" type="button"></button>
                 </div>
             </article>
             <article class="content__item">
                 <img class="content__img" src="./images/vladikavkaz.jpg" alt="Владикавказ">
                 <div class="content__info">
-                    <p class="content__title">Владикавказ</p>
+                    <h2 class="content__title">Владикавказ</h2>
                     <button class="content__like" type="button"></button>
                 </div>
             </article>
             <article class="content__item">
                 <img class="content__img" src="./images/msk.jpg" alt="Москва">
                 <div class="content__info">
-                    <p class="content__title">Москва</p>
+                    <h2 class="content__title">Москва</h2>
                     <button class="content__like" type="button"></button>
                 </div>
             </article>
@@ -73,11 +75,11 @@
     </footer>
     <div class="popup popup_opened">
         <div class="popup__window">
-            <button class="popup__close-btn"></button>
+            <button class="popup__close-btn" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup-form" action="#" name="userInfo" method="get">
-                <input class="popup-form__name" type="text" value="Жак-Ив Кусто" required>
-                <input class="popup-form__description" type="text" value="Исследователь океана">
+                <input class="popup-form__user popup-form__user_name" type="text" required>
+                <input class="popup-form__user popup-form__user_description" type="text">
                 <button type="submit" class="popup__save">Сохранить</button>
             </form>
         </div>

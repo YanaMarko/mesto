@@ -1,30 +1,34 @@
-const popupElement = document.querySelector('.popup');
-const editButtonElement = document.querySelector('.profile__edit-btn');
-const closeButtonElement = document.querySelector('.popup__close-btn');
-const formElement = document.querySelector('.popup-form');
-
+const popup = document.querySelector('.popup');
+const editButton = document.querySelector('.profile__edit-btn');
+const closeButton = document.querySelector('.popup__close-btn');
+const form = document.querySelector('.popup-form');
+const formName = document.querySelector('.popup-form__name');
+const formDescription = document.querySelector('.popup-form__description');
+const userName = document.querySelector('.profile__title');
 
 // ПОП-АП
 
-editButtonElement.addEventListener('click', openPopup);
-closeButtonElement.addEventListener('click', closePopup);
+// editButton.addEventListener('click', openPopup);
+// closeButton.addEventListener('click', closePopup);
 
 function openPopup() {
-    popupElement.classList.remove('popup_opened');
+    popup.classList.remove('popup_opened');
 }
 
 function closePopup() {
-    popupElement.classList.add('popup_opened');
+    popup.classList.add('popup_opened');
 }
 
 // ФОРМА
 
 function formSubmitHandler(evt) {
     evt.preventDefault();
-    const formName = document.querySelector('.popup-form__name').value;
-    const formDescription = document.querySelector('.popup-form__description').value;
+
+
     document.querySelector('.profile__title').textContent = formName;
     document.querySelector('.profile__subtitle').textContent = formDescription;
     closePopup();
 }
-formElement.addEventListener('submit', formSubmitHandler);
+form.addEventListener('submit', formSubmitHandler);
+editButton.addEventListener('click', openPopup);
+closeButton.addEventListener('click', closePopup);

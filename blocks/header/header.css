@@ -1,13 +1,12 @@
 .header {
-  margin: 36px auto 0;
+  margin: 44px auto 0;
   padding: 0 0 41px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid #ffffffb3;
   display: flex;
-  flex-direction: row;
   max-width: 880px;
 }
 
-@media (min-width: 763px) and (max-width: 1018px) {
+@media (min-width: 763px) and (max-width: 1274px) {
   .header {
     max-width: 600px;
   }
