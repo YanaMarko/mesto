@@ -1,3 +1,9 @@
 .pop-up-form__user {
- 
+    min-width: 358px;
+}
+
+@media screen and (max-width: 762px) {
+  .popup-form__user {
+    min-width: 238px;
+  }
 }
