@@ -6,6 +6,6 @@
 
 @media screen and (max-width: 762px) {
   .popup-form__user_description {
-    min-height: 52px;
+    min-height: 48px;
   }
 }
