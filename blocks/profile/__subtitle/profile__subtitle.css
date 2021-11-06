@@ -9,13 +9,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 763px) and (max-width: 1274px) {
-  .profile__title {
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 762px) {
+@media screen and (max-width: 1274px) {
   .profile__subtitle {
     margin: 10px auto 0;
     font-size: 14px;

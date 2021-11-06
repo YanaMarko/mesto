@@ -17,8 +17,8 @@
   position: absolute;
   content: '';
   height: 32px;
-  border: 2px solid #ffffff;
-  background-color: #ffffff;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   top: 0;
   transform: rotate(45deg);
 }
@@ -27,8 +27,8 @@
   position: absolute;
   content: '';
   height: 32px;
-  border: 2px solid #ffffff;
-  background-color: #ffffff;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   top: 0;
   transform: rotate(-45deg);
 }
@@ -43,8 +43,8 @@
     position: absolute;
     content: '';
     height: 20px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     top: 0;
     transform: rotate(45deg);
   }
@@ -53,8 +53,8 @@
     position: absolute;
     content: '';
     height: 20px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     top: 0;
     transform: rotate(-45deg);
   }

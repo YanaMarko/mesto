@@ -2,10 +2,10 @@
   margin: 37px 0 34px 19px;
   height: 24px;
   width: 24px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgb(255, 255, 255);
   background-image: url(../../../images/icon-pen.jpg);
   background-size: cover;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 
 .profile__edit-btn:hover {

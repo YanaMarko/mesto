@@ -1,6 +1,6 @@
 .content__info {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   border-radius: 0 0 10px 10px;
