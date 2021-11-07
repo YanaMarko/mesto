@@ -8,6 +8,8 @@ const userName = document.querySelector('.profile__title');
 const userDescription = document.querySelector('.profile__subtitle');
 
 function openPopup() {
+    formName.value = userName.textContent;
+    formDescription.value = userDescription.textContent;
     popup.classList.add('popup_opened');
 }
 
@@ -18,7 +20,7 @@ function closePopup() {
 function formSubmitHandler(evt) {
     evt.preventDefault();
 
-    userName.textContent = formName.value
+    userName.textContent = formName.value;
     userDescription.textContent = formDescription.value;
 
     closePopup();
