@@ -1,0 +1,19 @@
+.content__delete {
+  height: 19px;
+  width: 18px;
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  right: 20px;
+  background-image: url(../../../images/icon-delete.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: none;
+}
+
+.content__delete:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

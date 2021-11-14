@@ -1,4 +1,5 @@
 .content__item {
+  position: relative;
   max-width: 282px;
 }
 
