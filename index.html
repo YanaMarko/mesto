@@ -25,55 +25,15 @@
             </div>
             <button class="profile__add-photo-btn" type="button"></button>
         </section>
-        <section class="content">
-            <article class="content__item">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/dombay.jpg" alt="Домбай">
-                <div class="content__info">
-                    <h2 class="content__title">Домбай</h2>
-                    <button class="content__like" type="button"></button>
+        <section class="cards">
+            <template class="template" id="template">
+                <button class="card__delete" type="button"></button>
+                <img class="card__img" src="" alt="">
+                <div class="card__info">
+                    <h2 class="card__title">Домбай</h2>
+                    <button class="card__like" type="button"></button>
                 </div>
-            </article>
-            <article class="content__item">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/elbrus.jpg" alt="Эльбрус">
-                <div class="content__info">
-                    <h2 class="content__title">Гора Эльбрус</h2>
-                    <button class="content__like" type="button"></button>
-                </div>
-            </article>
-            <article class="content__item">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/karachaevsk.jpg" alt="Карачаевск">
-                <div class="content__info">
-                    <h2 class="content__title">Карачаевск</h2>
-                    <button class="content__like" type="button"></button>
-                </div>
-            </article>
-            <article class="content__item">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/komi-republic.jpg" alt="Республика Коми">
-                <div class="content__info">
-                    <h2 class="content__title">Республика Коми</h2>
-                    <button class="content__like button" type="button"></button>
-                </div>
-            </article>
-            <article class="content__item">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/vladikavkaz.jpg" alt="Владикавказ">
-                <div class="content__info">
-                    <h2 class="content__title">Владикавказ</h2>
-                    <button class="content__like" type="button"></button>
-                </div>
-            </article>
-            <article class="content__item">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/msk.jpg" alt="Москва">
-                <div class="content__info">
-                    <h2 class="content__title">Москва</h2>
-                    <button class="content__like" type="button"></button>
-                </div>
-            </article>
+            </template>;
         </section>
     </main>
     <footer class="footer">
@@ -91,19 +51,20 @@
             </form>
         </div>
     </div>
-    <div class="popup popup-place">
-        <div class="popup__window popup-place__window">
-            <button class="popup__close-btn popup-place__close-btn" type="button"></button>
+    <div class="popup popup-task">
+        <div class="popup__window">
+            <button class="popup__close-btn popup-task__close-btn" type="button"></button>
             <h2 class="popup__title">Новое место</h2>
-            <form class="popup-form popup-form-place" action="#" name="placeName" method="get">
-                <input class="popup-form__place popup-form__place_type_name" type="text" required
+            <form class="popup-form task-form" action="#" name="userInfo" method="get">
+                <input class="popup-form__task popup-form__task_type_name" type="text" required
                     placeholder="Название места">
-                <input class="popup-form__place popup-form__place_type_photo" placeholder="Ссылка на изображение">
-                <button class="popup__save popup-place__save" type="submit">Создать</button>
+                <input class="popup-form__task popup-form__task_type_link" type="text"
+                    placeholder="Сылка на изображение">
+                <button class="popup__save popup-save-task" type="submit">Сохранить</button>
             </form>
         </div>
     </div>
-    <div class="popup-card">
+    <div class="popup popup-card">
     </div>
     <script src="./scripts/scripts.js"></script>
 </body>

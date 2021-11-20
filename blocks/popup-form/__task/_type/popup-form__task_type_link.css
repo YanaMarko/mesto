@@ -1,11 +1,11 @@
-.popup-form__user_type_description {
+.popup-form__task_type_link {
   min-height: 50px;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-  
+    
 @media screen and (max-width: 762px) {
-  .popup-form__user_type_description {
+  .popup-form__task_type_link {
     min-height: 48px;
   }
 }

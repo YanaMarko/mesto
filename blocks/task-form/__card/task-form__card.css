@@ -1,9 +1,9 @@
-.popup-form__place {
+.task-form__card {
   min-width: 358px;
 }
 
 @media screen and (max-width: 762px) {
-  .popup-form__place {
+  .task-form__card {
     min-width: 238px;
   }
 }
