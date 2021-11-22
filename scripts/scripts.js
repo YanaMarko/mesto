@@ -1,4 +1,4 @@
-//не могу продвинуться дальше
+//не могу продвинуться дальше. в слаке не отвечают. посмотрите, пожалуйста, хоть это
 
 const popup = document.querySelector('.popup');
 const formName = document.querySelector('.popup-form__user_type_name');
@@ -79,6 +79,7 @@ function closeTaskPopup() {
     popupTask.classList.remove('popup_opened');
 }
 closeTaskButton.addEventListener('click', closeTaskPopup);
+
 //клонирование карточки
 const createTaskDomNode = (item) => {
     const taskTemplate = template.content.querySelector('.task').cloneNode(true);
@@ -89,34 +90,38 @@ const createTaskDomNode = (item) => {
 const result = initialCards.map((item) => {
     return createTaskDomNode(item);
 });
+template.append(...result)
 
-savePopupTask.onclick = function () {
-    addNewCard()
-    closeTaskPopup()
-}
-//изменение данных через форму
-function submitFormHandlerTask(evt) {
-    evt.preventDefault();
-    const cardNameValue = cardName.title;
-    const cardPhotoValue = cardPhoto.link;
-    const cardString = createTaskDomNode({ title: cardNameValue, link: cardPhotoValue });
-    task.preppend(cardString);
-    cardName.value = '';
-    cardPhoto.value = '';
-};
-popupTaskForm.addEventListener('submit', submitFormHandlerTask);
-task.append(...result)
-//создание карточки
-function createNewCard(item) {
-    const card = template.content.querySelector('.task');
-    template.cloneNode(true);
-    cardName = item.name;
-    cardPhoto.src = item.link;
-    cardPhoto.alt = item.name;
-}
+// перебор массива
 initialCards.forEach(function (item) {
     addNewCard(item);
 });
+
+//изменение данных через форму
+function submitFormHandlerTask(evt) {
+    evt.preventDefault();
+    popupTaskFormName = cardName.title;
+    popupTaskFormPhoto = cardPhoto.link;
+    const cardString = createTaskDomNode({ title: popupTaskFormName, link: popupTaskFormPhoto });
+    cardName.value = '';
+    cardPhoto.value = '';
+};
+
+//создание карточки
+function createNewCard(initialCards) {
+    const card = template.content.querySelector('.task');
+    template.cloneNode(true);
+    cardName = initialCards.name;
+    cardPhoto.src = initialCards.link;
+    closeTaskPopup()
+}
+savePopupTask.addEventListener('submit', createNewCard);
+
+// savePopupTask.onclick = function () {
+//     createNewCard()
+//     closeTaskPopup()
+// }
+
 //добавление карточки
 function addNewCard(item) {
     template = submitFormHandlerTask(item);
@@ -129,11 +134,13 @@ function addNewCard(item) {
 }
 savePopupTask.addEventListener('click', addNewCard);
 
+//удаление карточки
 // function deleteCard(evt) {
 //     evt.target.classList.closest('card__item').add('.card__delete');
 // }
 // deleteCardButton.addEventListener('click', deleteCard);
 
+//лайк
 // function likeCard() {
 //     evt.target.classList.toggle('content__like_type_active');
 // }
