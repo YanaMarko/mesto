@@ -62,6 +62,7 @@ function closePopup() {
 }
 closeButton.addEventListener('click', closePopup);
 
+
 function submitFormHandler(evt) {
     evt.preventDefault();
     userName.textContent = formName.value;
@@ -87,27 +88,25 @@ const createTaskDomNode = (item) => {
     taskTemplate.querySelector('.card__img').src = item.link;
     return taskTemplate;
 }
+
 const result = initialCards.map((item) => {
     return createTaskDomNode(item);
-});
-template.append(...result)
-
-// перебор массива
-initialCards.forEach(function (item) {
-    addNewCard(item);
 });
 
 //изменение данных через форму
 function submitFormHandlerTask(evt) {
     evt.preventDefault();
-    popupTaskFormName = cardName.title;
-    popupTaskFormPhoto = cardPhoto.link;
-    const cardString = createTaskDomNode({ title: popupTaskFormName, link: popupTaskFormPhoto });
+    popupTaskFormName = cardName.value;
+    popupTaskFormPhoto = cardPhoto.value;
+    taskTemplate = createTaskDomNode({ title: popupTaskFormName, link: popupTaskFormPhoto });
+    task.prepend(taskTemplate);
     cardName.value = '';
     cardPhoto.value = '';
 };
+popupTaskForm.addEventListener('submit', submitFormHandlerTask);
+task.append(...result)
 
-//создание карточки
+//создание карточки 
 function createNewCard(initialCards) {
     const card = template.content.querySelector('.task');
     template.cloneNode(true);
@@ -117,11 +116,6 @@ function createNewCard(initialCards) {
 }
 savePopupTask.addEventListener('submit', createNewCard);
 
-// savePopupTask.onclick = function () {
-//     createNewCard()
-//     closeTaskPopup()
-// }
-
 //добавление карточки
 function addNewCard(item) {
     template = submitFormHandlerTask(item);
@@ -130,18 +124,22 @@ function addNewCard(item) {
     deleteCardButton.addEventListener('click', () => deleteCard(template));
     template.insertAdjacentElement('beforebegin', cardName);
     template.insertAdjacentElement('beforebegin', cardPhoto);
-    template.append(...result);
 }
 savePopupTask.addEventListener('click', addNewCard);
 
+// перебор массива
+initialCards.forEach(function (item) {
+    addNewCard(item);
+});
+
 //удаление карточки
-// function deleteCard(evt) {
-//     evt.target.classList.closest('card__item').add('.card__delete');
-// }
-// deleteCardButton.addEventListener('click', deleteCard);
+function deleteCard(evt) {
+    evt.target.classList.closest('card__item').add('.card__delete');
+}
+deleteCardButton.addEventListener('click', deleteCard);
 
 //лайк
-// function likeCard() {
-//     evt.target.classList.toggle('content__like_type_active');
-// }
-// like.addEventListener('click', likeCard)
+function likeCard() {
+    evt.target.classList.toggle('content__like_type_active');
+}
+like.addEventListener('click', likeCard)
