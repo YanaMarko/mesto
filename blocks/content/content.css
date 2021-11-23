@@ -1,26 +1,17 @@
 .content {
   margin: 51px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(282px, 1fr));
-  row-gap: 19px;
-  column-gap: 17px;
   max-width: 880px;
 }
 
 @media (min-width: 763px) and (max-width: 1274px) {
   .content {
-    grid-template-columns: repeat(2, minmax(282px, 1fr));
-    grid-template-rows: repeat(3, minmax(360px, 362px));
     max-width: 580px;
   }
 }
 
 @media screen and (max-width: 762px) {
   .content {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0 auto;
     max-width: 320px;
-    gap: 0;
   }
 }

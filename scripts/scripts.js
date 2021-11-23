@@ -80,39 +80,42 @@ function closeTaskPopup() {
 closeTaskButton.addEventListener('click', closeTaskPopup);
 
 const createHTMLString = (item) => {
-    return ` <div class="card task">
-                <button class="card__delete" type="button"></button>
-                <img class="card__img" src="${item.link}" alt="">
-                <div class="card__info">
-                    <h2 class="card__title">${item.name}з</h2>
-                    <button class="card__like" type="button"></button>
-                </div>
-            </div> `
+    return `<template class="template">
+                <article class="content__item">
+                    <button class="content__delete" type="button"></button>
+                    <img class="content__img" src="${item.link}" alt="Домбай">
+                    <div class="content__info">
+                        <h2 class="content__title">${item.name}</h2>
+                        <button class="content__like" type="button"></button>
+                    </div>
+                </article>
+            </template>`
 };
 
 const result = initialCards.map((item) => {
     const div = document.createElement('div');
-    div.classList.add('task');
+    div.classList.add('content__item');
 
     const button = document.createElement('button');
-    button.classList.add('card__delete');
+    button.classList.add('content__delete');
 
     const divInfo = document.createElement('div');
-    divInfo.classList.add('card__info');
+    divInfo.classList.add('content__info');
 
     const img = document.createElement('img');
-    img.classList.add('card__img');
+    img.classList.add('content__img');
     img.src = item.link;
 
     const p = document.createElement('p');
-    p.classList.add('card__title');
+    p.classList.add('content__title');
     p.textContent = item.name;
 
     const likeButton = document.createElement('button');
-    likeButton.classList.add('card__like');
+    likeButton.classList.add('content__like');
 
     divInfo.append(p);
     divInfo.append(likeButton);
+    divInfo.append(button);
     div.append(img);
     div.append(divInfo);
 
