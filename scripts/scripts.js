@@ -82,9 +82,9 @@ closeTaskButton.addEventListener('click', closeTaskPopup);
 const createHTMLString = (item) => {
     return `<div class="task">
                 <button class="content__delete" type="button"></button>
-                <img class="content__img" src="./images/dombay.jpg" alt="Домбай">
+                <img class="content__img" src="${item.link}" alt="">
                 <div class="content__info">
-                    <h2 class="content__title">Домбай</h2>
+                    <h2 class="content__title">${item.name}</h2>
                     <button class="content__like" type="button"></button>
                 </div>
             </div>`
