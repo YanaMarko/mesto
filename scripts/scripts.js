@@ -8,9 +8,9 @@ const popupTaskFormPhoto = document.querySelector('.popup-form__task_type_link')
 let cardName = document.querySelector('.content__title');
 let cardPhoto = document.querySelector('.content__img');
 const popupTask = document.querySelector('.popup-task');
-let template = document.querySelector('.template');
-let task = document.querySelector('.task');
-const like = document.querySelector('.content__like');
+const template = document.querySelector('.template');
+const task = document.querySelector('.task');
+const likeButton = document.querySelector('.content__like');
 const savePopupTask = document.querySelector('.popup-save-task');
 const openTaskButton = document.querySelector('.profile__add-photo-btn');
 const form = document.querySelector('.popup-form');
@@ -104,7 +104,7 @@ function addNewTemplate(evt) {
     template.insertAdjacentHTML('beforebegin', newCard);
     closeTaskPopup()
 };
-template.insertAdjacentHTML('beforebegin', result.join(''));
+template.insertAdjacentHTML('afterend', result.join(''));
 popupTaskForm.addEventListener('submit', addNewTemplate);
 
 // //клонирование карточки
@@ -158,14 +158,18 @@ popupTaskForm.addEventListener('submit', addNewTemplate);
 //     addNewCard(item);
 // });
 
-// //удаление карточки
+//удаление карточки
 // function deleteCard(evt) {
-//     evt.target.classList.closest('card__item').add('.card__delete');
+//     alert('delete')
+//     template.classList.add('conten__delete')
+//     evt.target.classList.closest('card__item').add('card__delete');
 // }
 // deleteCardButton.addEventListener('click', deleteCard);
+// console.log(deleteCardButton)
 
 // //лайк
-// function likeCard() {
+// function likeCard(evt) {
+//     alert('like')
 //     evt.target.classList.toggle('content__like_type_active');
 // }
-// like.addEventListener('click', likeCard)
+// likeButton.addEventListener('click', likeCard)
