@@ -1,0 +1,15 @@
+.task {
+  position: relative;
+}
+
+@media screen and (max-width: 762px) {
+  .task {
+    margin: 20px auto 0;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .task:first-of-type {
+    margin: 36px auto 0;
+  }
+}

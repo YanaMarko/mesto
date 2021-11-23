@@ -80,49 +80,21 @@ function closeTaskPopup() {
 closeTaskButton.addEventListener('click', closeTaskPopup);
 
 const createHTMLString = (item) => {
-    return `<template class="template">
-                <article class="content__item">
-                    <button class="content__delete" type="button"></button>
-                    <img class="content__img" src="${item.link}" alt="Домбай">
-                    <div class="content__info">
-                        <h2 class="content__title">${item.name}</h2>
-                        <button class="content__like" type="button"></button>
-                    </div>
-                </article>
-            </template>`
+    return `<div class="task">
+                <button class="content__delete" type="button"></button>
+                <img class="content__img" src="./images/dombay.jpg" alt="Домбай">
+                <div class="content__info">
+                    <h2 class="content__title">Домбай</h2>
+                    <button class="content__like" type="button"></button>
+                </div>
+            </div>`
 };
 
 const result = initialCards.map((item) => {
-    const div = document.createElement('div');
-    div.classList.add('content__item');
-
-    const button = document.createElement('button');
-    button.classList.add('content__delete');
-
-    const divInfo = document.createElement('div');
-    divInfo.classList.add('content__info');
-
-    const img = document.createElement('img');
-    img.classList.add('content__img');
-    img.src = item.link;
-
-    const p = document.createElement('p');
-    p.classList.add('content__title');
-    p.textContent = item.name;
-
-    const likeButton = document.createElement('button');
-    likeButton.classList.add('content__like');
-
-    divInfo.append(p);
-    divInfo.append(likeButton);
-    divInfo.append(button);
-    div.append(img);
-    div.append(divInfo);
-
-    return div;
+    return createHTMLString(item);
 });
 
-template.append(...result);
+template.insertAdjacentHTML('beforebegin', result.join(''));
 console.log(result);
 
 
