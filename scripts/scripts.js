@@ -101,75 +101,20 @@ function addNewTemplate(evt) {
     cardName = popupTaskFormName.value;
     cardPhoto = popupTaskFormPhoto.value;
     const newCard = createHTMLString({ name: cardName, link: cardPhoto });
-    template.insertAdjacentHTML('beforebegin', newCard);
+    template.insertAdjacentHTML('afterend', newCard);
+    popupTaskFormName.value = '';
+    popupTaskFormPhoto.value = '';
     closeTaskPopup()
 };
 template.insertAdjacentHTML('afterend', result.join(''));
 popupTaskForm.addEventListener('submit', addNewTemplate);
 
-// //клонирование карточки
-// const createTaskDomNode = (item) => {
-//     const taskTemplate = template.content.querySelector('.task').cloneNode(true);
-//     taskTemplate.querySelector('.card__title').textContent = item.title;
-//     taskTemplate.querySelector('.card__img').src = item.link;
-//     return taskTemplate;
-// }
-
-// const result = initialCards.map((item) => {
-//     return createTaskDomNode(item);
-// });
-
-// //изменение данных через форму
-// function submitFormHandlerTask(evt) {
-//     evt.preventDefault();
-//     popupTaskFormName = cardName.value;
-//     popupTaskFormPhoto = cardPhoto.value;
-//     taskTemplate = createTaskDomNode({ title: popupTaskFormName, link: popupTaskFormPhoto });
-//     task.prepend(taskTemplate);
-//     cardName.value = '';
-//     cardPhoto.value = '';
-// };
-// popupTaskForm.addEventListener('submit', submitFormHandlerTask);
-// task.append(...result)
-
-// //создание карточки 
-// function createNewCard(initialCards) {
-//     const card = template.content.querySelector('.task');
-//     template.cloneNode(true);
-//     cardName = initialCards.name;
-//     cardPhoto.src = initialCards.link;
-//     closeTaskPopup()
-// }
-// savePopupTask.addEventListener('submit', createNewCard);
-
-// //добавление карточки
-// function addNewCard(item) {
-//     template = submitFormHandlerTask(item);
-//     cards.prepend(template);
-//     like.addEventListener('click', likeCard);
-//     deleteCardButton.addEventListener('click', () => deleteCard(template));
-//     template.insertAdjacentElement('beforebegin', cardName);
-//     template.insertAdjacentElement('beforebegin', cardPhoto);
-// }
-// savePopupTask.addEventListener('click', addNewCard);
-
-// // перебор массива
-// initialCards.forEach(function (item) {
-//     addNewCard(item);
-// });
-
-//удаление карточки
 // function deleteCard(evt) {
-//     alert('delete')
-//     template.classList.add('conten__delete')
-//     evt.target.classList.closest('card__item').add('card__delete');
+//     evt.target.closest('.template').remove();
 // }
 // deleteCardButton.addEventListener('click', deleteCard);
-// console.log(deleteCardButton)
 
-// //лайк
 // function likeCard(evt) {
-//     alert('like')
-//     evt.target.classList.toggle('content__like_type_active');
+//     evt.classList.toggle('content__like_type_active');
 // }
 // likeButton.addEventListener('click', likeCard)
