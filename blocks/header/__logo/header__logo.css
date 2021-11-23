@@ -1,8 +1,8 @@
 .header__logo {
   background-image: url(../../../images/icon-logo.jpg);
   background-size: cover;
-  height: 32px;
-  width: 138px;
+  height: 34px;
+  width: 147px;
 }
 
 @media screen and (max-width: 762px) {
