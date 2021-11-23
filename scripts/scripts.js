@@ -5,11 +5,11 @@ const userName = document.querySelector('.profile__title');
 const userDescription = document.querySelector('.profile__subtitle');
 const popupTaskFormName = document.querySelector('.popup-form__task_type_name');
 const popupTaskFormPhoto = document.querySelector('.popup-form__task_type_link');
-const cardName = document.querySelector('.content__title');
-const cardPhoto = document.querySelector('.content__img');
+let cardName = document.querySelector('.content__title');
+let cardPhoto = document.querySelector('.content__img');
 const popupTask = document.querySelector('.popup-task');
-const template = document.querySelector('.template');
-const task = document.querySelector('.task');
+let template = document.querySelector('.template');
+let task = document.querySelector('.task');
 const like = document.querySelector('.content__like');
 const savePopupTask = document.querySelector('.popup-save-task');
 const openTaskButton = document.querySelector('.profile__add-photo-btn');
@@ -94,72 +94,18 @@ const result = initialCards.map((item) => {
     return createHTMLString(item);
 });
 
+function addNewTemplate(evt) {
+    evt.preventDefault();
+    closeTaskPopup;
+    const placeElement = document.querySelector('.template').cloneNode(true);
+    cardName = popupTaskFormName.value;
+    cardPhoto = popupTaskFormPhoto.value;
+    const newCard = createHTMLString({ name: cardName, link: cardPhoto });
+    template.insertAdjacentHTML('beforebegin', newCard);
+    closeTaskPopup()
+};
 template.insertAdjacentHTML('beforebegin', result.join(''));
-console.log(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+popupTaskForm.addEventListener('submit', addNewTemplate);
 
 // //клонирование карточки
 // const createTaskDomNode = (item) => {
