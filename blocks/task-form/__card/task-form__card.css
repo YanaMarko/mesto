@@ -1,9 +1,0 @@
-.task-form__card {
-  min-width: 358px;
-}
-
-@media screen and (max-width: 762px) {
-  .task-form__card {
-    min-width: 238px;
-  }
-}

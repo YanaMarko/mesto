@@ -1,16 +1,16 @@
-.template {
+.content__item {
   position: relative;
   max-width: 282px;
 }
 
 @media screen and (max-width: 762px) {
-  .template {
+  .content__item {
     margin: 20px auto 0;
   }
 }
 
 @media screen and (max-width: 762px) {
-  .template:first-of-type {
+  .content__item:first-of-type {
     margin: 36px auto 0;
   }
 }

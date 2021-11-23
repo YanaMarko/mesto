@@ -1,4 +1,4 @@
-.cards {
+.content {
   margin: 51px auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(282px, 1fr));
@@ -8,14 +8,15 @@
 }
 
 @media (min-width: 763px) and (max-width: 1274px) {
-  .cards {
+  .content {
     grid-template-columns: repeat(2, minmax(282px, 1fr));
+    grid-template-rows: repeat(3, minmax(360px, 362px));
     max-width: 580px;
   }
 }
 
 @media screen and (max-width: 762px) {
-  .cards {
+  .content {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
