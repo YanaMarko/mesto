@@ -1,0 +1,18 @@
+.popup-picture {
+  position: relative;
+  margin: auto;
+  width: 816px;
+  height: 570px;
+  position: absolute;
+  top: 90px;
+  left: 20%;
+  right: auto;
+  display: none;
+}
+
+@media screen and (max-width: 762px) {
+  .popup-picture {
+    width: 240px;
+    height: 320px;
+  }
+}

@@ -1,3 +1,4 @@
+'use strict'
 const popup = document.querySelector('.popup');
 const formName = document.querySelector('.popup-form__user_type_name');
 const formDescription = document.querySelector('.popup-form__user_type_description');
@@ -60,7 +61,6 @@ function closePopup() {
 }
 closeButton.addEventListener('click', closePopup);
 
-
 function submitFormHandler(evt) {
     evt.preventDefault();
     userName.textContent = formName.value;
@@ -79,42 +79,3 @@ function closeTaskPopup() {
 }
 closeTaskButton.addEventListener('click', closeTaskPopup);
 
-const createHTMLString = (item) => {
-    return `<div class="task">
-                <button class="content__delete" type="button"></button>
-                <img class="content__img" src="${item.link}" alt="">
-                <div class="content__info">
-                    <h2 class="content__title">${item.name}</h2>
-                    <button class="content__like" type="button"></button>
-                </div>
-            </div>`
-};
-
-const result = initialCards.map((item) => {
-    return createHTMLString(item);
-});
-
-function addNewTemplate(evt) {
-    evt.preventDefault();
-    closeTaskPopup;
-    const placeElement = document.querySelector('.template').cloneNode(true);
-    cardName = popupTaskFormName.value;
-    cardPhoto = popupTaskFormPhoto.value;
-    const newCard = createHTMLString({ name: cardName, link: cardPhoto });
-    template.insertAdjacentHTML('afterend', newCard);
-    popupTaskFormName.value = '';
-    popupTaskFormPhoto.value = '';
-    closeTaskPopup()
-};
-template.insertAdjacentHTML('afterend', result.join(''));
-popupTaskForm.addEventListener('submit', addNewTemplate);
-
-// function deleteCard(evt) {
-//     evt.target.closest('.template').remove();
-// }
-// deleteCardButton.addEventListener('click', deleteCard);
-
-// function likeCard(evt) {
-//     evt.classList.toggle('content__like_type_active');
-// }
-// likeButton.addEventListener('click', likeCard)

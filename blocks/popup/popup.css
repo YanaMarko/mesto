@@ -1,6 +1,9 @@
 .popup {
   background: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: block;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.5s linear;
+  visibility: hidden;
   justify-content: center;
   align-items: center;
   position: fixed;
