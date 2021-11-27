@@ -11,17 +11,20 @@ let cardPhoto = document.querySelector('.content__img');
 const popupTask = document.querySelector('.popup-task');
 const template = document.querySelector('.template');
 const task = document.querySelector('.task');
-const likeButton = document.querySelector('.content__like');
-const savePopupTask = document.querySelector('.popup-save-task');
+const likeCardButton = document.querySelector('.content__like');
+const saveTaskButton = document.querySelector('.popup-save-task');
 const openTaskButton = document.querySelector('.profile__add-photo-btn');
 const form = document.querySelector('.popup-form');
-const editButton = document.querySelector('.profile__edit-btn');
-const closeButton = document.querySelector('.popup__close-btn');
+const editProfileButton = document.querySelector('.profile__edit-btn');
+const closePopupButton = document.querySelector('.popup__close-btn');
 const closeTaskButton = document.querySelector('.popup-task__close-btn');
 const popupTaskForm = document.querySelector('.task-form');
 const deleteCardButton = document.querySelector('.content__delete');
 const cards = document.querySelector('.content');
-
+const popupPictureCloseButton = document.querySelector('.popup-picture__close-btn');
+const popupPictureImg = document.querySelector('.popup-picture__img');
+const popupPictureTitle = document.querySelector('.popup-picture__title');
+const popupPicture = document.querySelector('.popup-picture')
 const initialCards = [
     {
         name: 'Архыз',
@@ -54,13 +57,14 @@ function openPopup() {
     formDescription.value = userDescription.textContent;
     popup.classList.add('popup_opened');
 }
-editButton.addEventListener('click', openPopup);
+editProfileButton.addEventListener('click', openPopup);
 
 function closePopup() {
     popup.classList.remove('popup_opened');
 }
-closeButton.addEventListener('click', closePopup);
+closePopupButton.addEventListener('click', closePopup);
 
+//обработка формы
 function submitFormHandler(evt) {
     evt.preventDefault();
     userName.textContent = formName.value;
@@ -78,4 +82,83 @@ function closeTaskPopup() {
     popupTask.classList.remove('popup_opened');
 }
 closeTaskButton.addEventListener('click', closeTaskPopup);
+
+//шаблон новой карточки
+const createTaskDomNode = (item) => {
+    const taskTemplate = template.content.querySelector('.task').cloneNode(true);
+    taskTemplate.querySelector('.content__title').textContent = item.name;
+    taskTemplate.querySelector('.content__img').src = item.link;
+    return taskTemplate;
+};
+
+const result = initialCards.map((item) => {
+    return createTaskDomNode(item);
+});
+
+//меняю данные в форме
+const submitFormHandlerTask = (evt) => {
+    evt.preventDefault();
+    const newCard = createTaskDomNode({ name: popupTaskFormName.value, link: popupTaskFormPhoto.value });
+    cards.prepend(newCard)
+    closeTaskPopup();
+    popupTaskFormName.value = '';
+    popupTaskFormPhoto.value = '';
+    return newCard;
+};
+popupTaskForm.addEventListener('submit', submitFormHandlerTask);
+cards.append(...result);
+
+// deleteCardButton.addEventListener('click', () => {
+//     deleteCardButton.closest('.template').remove();
+// });
+
+// likeCardButton.addEventListener('click', (evt) => {
+//     evt.target.classList.toggle('content__like_type_active');
+// });
+//создание попапа с картинкой
+// function openPicturePopup() {
+//     popupPictupeTitle.textContent = cardName.textContent;
+//     popupPictureImg.src = cardPhoto.link;
+//     popupPicture.classList.add('popup_opened');
+// }
+// cardPhoto.addEventListener('click', openPicturePopup);
+
+// function closePicturePopup() {
+//     popupPicture.classList.remove('popup_opened');
+// }
+// popupPictureCloseButton.addEventListener('click', closePicturePopup);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
