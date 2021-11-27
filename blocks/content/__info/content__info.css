@@ -4,4 +4,13 @@
   display: flex;
   justify-content: space-between;
   border-radius: 0 0 10px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 762px) {
+  .content__info {
+    width: 282px;
+  }
 }

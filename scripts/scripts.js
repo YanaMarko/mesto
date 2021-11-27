@@ -11,7 +11,7 @@ let cardPhoto = document.querySelector('.content__img');
 const popupTask = document.querySelector('.popup-task');
 const template = document.querySelector('.template');
 const task = document.querySelector('.task');
-const likeCardButton = document.querySelector('.content__like');
+const likeCardButton = document.getElementsByClassName('content__like');
 const saveTaskButton = document.querySelector('.popup-save-task');
 const openTaskButton = document.querySelector('.profile__add-photo-btn');
 const form = document.querySelector('.popup-form');
@@ -19,7 +19,7 @@ const editProfileButton = document.querySelector('.profile__edit-btn');
 const closePopupButton = document.querySelector('.popup__close-btn');
 const closeTaskButton = document.querySelector('.popup-task__close-btn');
 const popupTaskForm = document.querySelector('.task-form');
-const deleteCardButton = document.querySelector('.content__delete');
+const deleteCardButton = document.getElementsByClassName('content__delete');
 const cards = document.querySelector('.content');
 const popupPictureCloseButton = document.querySelector('.popup-picture__close-btn');
 const popupPictureImg = document.querySelector('.popup-picture__img');
@@ -95,7 +95,7 @@ const result = initialCards.map((item) => {
     return createTaskDomNode(item);
 });
 
-//меняю данные в форме
+//меняю данные в форме и создаю новую карточку
 const submitFormHandlerTask = (evt) => {
     evt.preventDefault();
     const newCard = createTaskDomNode({ name: popupTaskFormName.value, link: popupTaskFormPhoto.value });
@@ -107,58 +107,3 @@ const submitFormHandlerTask = (evt) => {
 };
 popupTaskForm.addEventListener('submit', submitFormHandlerTask);
 cards.append(...result);
-
-// deleteCardButton.addEventListener('click', () => {
-//     deleteCardButton.closest('.template').remove();
-// });
-
-// likeCardButton.addEventListener('click', (evt) => {
-//     evt.target.classList.toggle('content__like_type_active');
-// });
-//создание попапа с картинкой
-// function openPicturePopup() {
-//     popupPictupeTitle.textContent = cardName.textContent;
-//     popupPictureImg.src = cardPhoto.link;
-//     popupPicture.classList.add('popup_opened');
-// }
-// cardPhoto.addEventListener('click', openPicturePopup);
-
-// function closePicturePopup() {
-//     popupPicture.classList.remove('popup_opened');
-// }
-// popupPictureCloseButton.addEventListener('click', closePicturePopup);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
