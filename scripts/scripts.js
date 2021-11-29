@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 const popup = document.querySelector('.popup');
 const formName = document.querySelector('.popup-form__user_type_name');
 const formDescription = document.querySelector('.popup-form__user_type_description');
@@ -11,7 +11,6 @@ let cardPhoto = document.querySelector('.content__img');
 const popupTask = document.querySelector('.popup-task');
 const template = document.querySelector('.template');
 const task = document.querySelector('.task');
-const likeCardButton = document.getElementsByClassName('content__like');
 const saveTaskButton = document.querySelector('.popup-save-task');
 const openTaskButton = document.querySelector('.profile__add-photo-btn');
 const form = document.querySelector('.popup-form');
@@ -19,12 +18,14 @@ const editProfileButton = document.querySelector('.profile__edit-btn');
 const closePopupButton = document.querySelector('.popup__close-btn');
 const closeTaskButton = document.querySelector('.popup-task__close-btn');
 const popupTaskForm = document.querySelector('.task-form');
-const deleteCardButton = document.getElementsByClassName('content__delete');
 const cards = document.querySelector('.content');
 const popupPictureCloseButton = document.querySelector('.popup-picture__close-btn');
 const popupPictureImg = document.querySelector('.popup-picture__img');
 const popupPictureTitle = document.querySelector('.popup-picture__title');
-const popupPicture = document.querySelector('.popup-picture')
+const popupPicture = document.querySelector('.popup-picture');
+const likeCardButton = document.querySelector('.content__like');
+const deleteCardButton = document.querySelector('.content__delete');
+console.log(deleteCardButton)//null
 const initialCards = [
     {
         name: 'Архыз',
@@ -88,6 +89,17 @@ const createTaskDomNode = (item) => {
     const taskTemplate = template.content.querySelector('.task').cloneNode(true);
     taskTemplate.querySelector('.content__title').textContent = item.name;
     taskTemplate.querySelector('.content__img').src = item.link;
+
+    // const toggleLike = (evt) => {
+    //     evt.target.classList.toggle('.content__like_type_active')
+    // };
+    // likeCardButton.addEventListener('click', toggleLike);
+
+    // function deleteCard() {
+    //     // alert('trash');
+    // };
+    // deleteCardButton.addEventListener('click', deleteCard);
+
     return taskTemplate;
 };
 
