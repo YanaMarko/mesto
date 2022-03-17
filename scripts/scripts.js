@@ -1,4 +1,4 @@
-// 'use strict'
+'use strict'
 const popup = document.querySelector('.popup');
 const formName = document.querySelector('.popup-form__user_type_name');
 const formDescription = document.querySelector('.popup-form__user_type_description');
@@ -24,8 +24,7 @@ const popupPictureImg = document.querySelector('.popup-picture__img');
 const popupPictureTitle = document.querySelector('.popup-picture__title');
 const popupPicture = document.querySelector('.popup-picture');
 const likeCardButton = document.querySelector('.content__like');
-const deleteCardButton = document.querySelector('.content__delete');
-console.log(deleteCardButton)//null
+const deleteCardButton = document.getElementsByClassName('content__delete');
 const initialCards = [
     {
         name: 'Архыз',
@@ -89,17 +88,6 @@ const createTaskDomNode = (item) => {
     const taskTemplate = template.content.querySelector('.task').cloneNode(true);
     taskTemplate.querySelector('.content__title').textContent = item.name;
     taskTemplate.querySelector('.content__img').src = item.link;
-
-    // const toggleLike = (evt) => {
-    //     evt.target.classList.toggle('.content__like_type_active')
-    // };
-    // likeCardButton.addEventListener('click', toggleLike);
-
-    // function deleteCard() {
-    //     // alert('trash');
-    // };
-    // deleteCardButton.addEventListener('click', deleteCard);
-
     return taskTemplate;
 };
 
@@ -119,3 +107,20 @@ const submitFormHandlerTask = (evt) => {
 };
 popupTaskForm.addEventListener('submit', submitFormHandlerTask);
 cards.append(...result);
+
+
+
+
+
+
+
+// function toggleLike(evt) {
+//     evt.target.classList.toggle('.content__like_type_active')
+// };
+// likeCardButton.addEventListener('click', toggleLike);
+// console.log(likeCardButton)//null
+
+function deleteCard() {
+    alert('trash');
+};
+deleteCardButton.addEventListener('click', deleteCard);
