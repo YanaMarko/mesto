@@ -107,20 +107,3 @@ const submitFormHandlerTask = (evt) => {
 };
 popupTaskForm.addEventListener('submit', submitFormHandlerTask);
 cards.append(...result);
-
-
-
-
-
-
-
-// function toggleLike(evt) {
-//     evt.target.classList.toggle('.content__like_type_active')
-// };
-// likeCardButton.addEventListener('click', toggleLike);
-// console.log(likeCardButton)//null
-
-function deleteCard() {
-    alert('trash');
-};
-deleteCardButton.addEventListener('click', deleteCard);
